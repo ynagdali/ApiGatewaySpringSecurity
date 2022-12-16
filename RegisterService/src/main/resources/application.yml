@@ -1,0 +1,16 @@
+server:
+  port: 8088
+  
+
+spring:  datasource:    url: jdbc:oracle:thin:@localhost:1521:orcl
+    password: password2
+    username: homeuser
+    driver-class-name: oracle.jdbc.OracleDriver  jpa:    hibernate:      ddl-auto: update    show-sql: true    database-platform: org.hibernate.dialect.Oracle12cDialect
+      application:    name: REGISTER-SERVICE
+    
+  eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8761/dashboard/
+      instance:
+      preferIpAddress: true
